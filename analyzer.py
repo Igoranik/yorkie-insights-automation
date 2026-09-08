@@ -1,41 +1,8 @@
-name: Yorkie Instagram Insights
+#!/usr/bin/env python3
+"""Backward-compatible workflow entry point for publishing the latest snapshot."""
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: '0 6 * * *'
-    - cron: '0 9 * * *'
-    - cron: '0 12 * * *'
-    - cron: '0 14 * * *'
+from endpoint import main
 
-permissions:
-  contents: write
 
-jobs:
-  collect:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-
-      - name: Collect insights
-        env:
-          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
-          IG_USER_ID: ${{ secrets.IG_USER_ID }}
-          GRAPH_VERSION: v26.0
-        run: python collector.py
-
-      - name: Analyze insights
-        run: python analyzer.py
-
-      - name: Commit data
-        run: |
-          git config user.name "yorkie-insights-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add data/
-          git diff --cached --quiet || git commit -m "Update Instagram Insights"
-          git push
+if __name__ == "__main__":
+    main()
