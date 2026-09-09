@@ -1,0 +1,33 @@
+name: Yorkie Insights Email
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Yorkie Instagram Insights"]
+    types: [completed]
+
+jobs:
+  send:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Send Gmail report
+        timeout-minutes: 2
+        env:
+          GMAIL_SMTP_USER: ${{ secrets.GMAIL_SMTP_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          INSIGHTS_EMAIL_TO: ${{ secrets.INSIGHTS_EMAIL_TO }}
+        run: python notify_email.py
