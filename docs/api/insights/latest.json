@@ -1,9 +1,27 @@
 {
   "ok": true,
   "schema_version": 1,
-  "generated_at": "2026-09-09T09:10:59Z",
-  "reels_count": 10,
+  "generated_at": "2026-09-09T12:07:48Z",
+  "reels_count": 11,
   "items": [
+    {
+      "id": "17901020133577044",
+      "media_type": "VIDEO",
+      "media_product_type": "REELS",
+      "timestamp": "2026-09-09T09:33:11+0000",
+      "permalink": "https://www.instagram.com/reel/DdD8WI0KQR2/",
+      "caption": "Small dog. Big opponent. 🍉🐶 Who won?\n\n#yorkie #yorkshireterrier #yorkielife #funnydogs.",
+      "reach": 3,
+      "views": 4,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0,
+      "ig_reels_avg_watch_time": 61263,
+      "ig_reels_video_view_total_time": 245052,
+      "reels_skip_rate": 33.3,
+      "status": "INSUFFICIENT_DATA"
+    },
     {
       "id": "18111983126047786",
       "media_type": "VIDEO",
@@ -17,8 +35,8 @@
       "comments": 0,
       "saved": 0,
       "shares": 0,
-      "ig_reels_avg_watch_time": 13569,
-      "ig_reels_video_view_total_time": 149259,
+      "ig_reels_avg_watch_time": 11879,
+      "ig_reels_video_view_total_time": 154436,
       "reels_skip_rate": 62.5,
       "status": "INSUFFICIENT_DATA"
     },
@@ -35,8 +53,8 @@
       "comments": 1,
       "saved": 0,
       "shares": 0,
-      "ig_reels_avg_watch_time": 21373,
-      "ig_reels_video_view_total_time": 192362,
+      "ig_reels_avg_watch_time": 19338,
+      "ig_reels_video_view_total_time": 193380,
       "reels_skip_rate": 33.3,
       "status": "INSUFFICIENT_DATA"
     },
