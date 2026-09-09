@@ -1,7 +1,7 @@
 {
   "ok": true,
   "schema_version": 1,
-  "generated_at": "2026-09-09T13:39:13Z",
+  "generated_at": "2026-09-09T14:14:34Z",
   "reels_count": 11,
   "items": [
     {
@@ -17,8 +17,8 @@
       "comments": 0,
       "saved": 0,
       "shares": 0,
-      "ig_reels_avg_watch_time": 49641,
-      "ig_reels_video_view_total_time": 248206,
+      "ig_reels_avg_watch_time": 44574,
+      "ig_reels_video_view_total_time": 267445,
       "reels_skip_rate": 25,
       "status": "INSUFFICIENT_DATA"
     },
