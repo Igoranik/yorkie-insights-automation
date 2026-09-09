@@ -1,7 +1,7 @@
 {
   "ok": true,
   "schema_version": 1,
-  "generated_at": "2026-09-09T07:56:04Z",
+  "generated_at": "2026-09-09T09:10:59Z",
   "reels_count": 10,
   "items": [
     {
@@ -53,8 +53,8 @@
       "comments": 0,
       "saved": 1,
       "shares": 0,
-      "ig_reels_avg_watch_time": 3721,
-      "ig_reels_video_view_total_time": 424215,
+      "ig_reels_avg_watch_time": 3697,
+      "ig_reels_video_view_total_time": 425156,
       "reels_skip_rate": 80.6,
       "status": "WATCH"
     },
@@ -71,8 +71,8 @@
       "comments": 0,
       "saved": 0,
       "shares": 0,
-      "ig_reels_avg_watch_time": 7958,
-      "ig_reels_video_view_total_time": 119376,
+      "ig_reels_avg_watch_time": 8800,
+      "ig_reels_video_view_total_time": 140801,
       "reels_skip_rate": 60,
       "status": "INSUFFICIENT_DATA"
     },
