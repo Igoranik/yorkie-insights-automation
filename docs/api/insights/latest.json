@@ -1,7 +1,7 @@
 {
   "ok": true,
   "schema_version": 1,
-  "generated_at": "2026-09-09T06:14:02Z",
+  "generated_at": "2026-09-09T07:41:23Z",
   "reels_count": 10,
   "items": [
     {
@@ -17,8 +17,8 @@
       "comments": 0,
       "saved": 0,
       "shares": 0,
-      "ig_reels_avg_watch_time": 11433,
-      "ig_reels_video_view_total_time": 114334,
+      "ig_reels_avg_watch_time": 13569,
+      "ig_reels_video_view_total_time": 149259,
       "reels_skip_rate": 62.5,
       "status": "INSUFFICIENT_DATA"
     },
@@ -35,8 +35,8 @@
       "comments": 1,
       "saved": 0,
       "shares": 0,
-      "ig_reels_avg_watch_time": 23662,
-      "ig_reels_video_view_total_time": 189296,
+      "ig_reels_avg_watch_time": 21373,
+      "ig_reels_video_view_total_time": 192362,
       "reels_skip_rate": 33.3,
       "status": "INSUFFICIENT_DATA"
     },
@@ -53,8 +53,8 @@
       "comments": 0,
       "saved": 1,
       "shares": 0,
-      "ig_reels_avg_watch_time": 3617,
-      "ig_reels_video_view_total_time": 408808,
+      "ig_reels_avg_watch_time": 3721,
+      "ig_reels_video_view_total_time": 424215,
       "reels_skip_rate": 80.6,
       "status": "WATCH"
     },
@@ -71,8 +71,8 @@
       "comments": 0,
       "saved": 0,
       "shares": 0,
-      "ig_reels_avg_watch_time": 4399,
-      "ig_reels_video_view_total_time": 61593,
+      "ig_reels_avg_watch_time": 7958,
+      "ig_reels_video_view_total_time": 119376,
       "reels_skip_rate": 60,
       "status": "INSUFFICIENT_DATA"
     },
