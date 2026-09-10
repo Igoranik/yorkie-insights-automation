@@ -21,6 +21,16 @@ def _fail(msg: str) -> None:
     raise ValueError(msg)
 
 def extract_reels(data: dict[str, Any]) -> list[dict[str, Any]]:
+    if "items" in data:
+        items = data["items"]
+        if not isinstance(items, list):
+            _fail("'items' must be an array")
+        if not items:
+            _fail("'items' must not be empty")
+        if not all(isinstance(x, dict) for x in items):
+            _fail("every item in 'items' must be an object")
+        return items
+
     if "reels" in data:
         reels = data["reels"]
         if not isinstance(reels, list):
@@ -64,6 +74,13 @@ def validate_payload_bytes(raw: bytes) -> dict[str, Any]:
 
     if not isinstance(data, dict):
         _fail("latest.json root must be an object")
+
+    if "items" in data:
+        if data.get("ok") is not True:
+            _fail("items payload: ok must be true")
+        schema_version = data.get("schema_version")
+        if isinstance(schema_version, bool) or schema_version != 1:
+            _fail("items payload: schema_version must be 1")
 
     generated_at = data.get("generated_at")
     if not isinstance(generated_at, str) or not generated_at.strip():
