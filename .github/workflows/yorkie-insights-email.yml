@@ -1,0 +1,91 @@
+name: Yorkie Insights -> Gmail
+
+on:
+  push:
+    paths:
+      - 'api/insights/latest.json'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: yorkie-insights-email-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  send-insights:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    env:
+      LATEST_FILE: api/insights/latest.json
+      YORKIE_EVENT_TYPE: YORKIE_INSIGHTS_UPDATE
+      YORKIE_SCHEMA_VERSION: YORKIE_INSIGHTS_PAYLOAD_COMPAT_V1
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify exact changed source
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f "$LATEST_FILE"
+          echo "Using exact Yorkie source: $LATEST_FILE"
+
+      - name: Strictly validate Yorkie Insights payload
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/validate_payload.py "$LATEST_FILE"
+
+      - name: Send latest Yorkie Insights to Gmail
+        env:
+          GMAIL_SMTP_USER: ${{ secrets.GMAIL_SMTP_USER }}
+          GMAIL_SMTP_APP_PASSWORD: ${{ secrets.GMAIL_SMTP_APP_PASSWORD }}
+          YORKIE_INSIGHTS_RECIPIENT: ${{ secrets.YORKIE_INSIGHTS_RECIPIENT }}
+          GITHUB_SHA_VALUE: ${{ github.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import os
+          import smtplib
+          import sys
+          from email.message import EmailMessage
+          from pathlib import Path
+
+          sys.path.insert(0, "scripts")
+          from validate_payload import validate_payload_bytes, source_event_id
+
+          sender = os.environ["GMAIL_SMTP_USER"].strip()
+          password = os.environ["GMAIL_SMTP_APP_PASSWORD"].strip()
+          recipient = os.environ.get("YORKIE_INSIGHTS_RECIPIENT", "").strip() or sender
+          latest_file = Path(os.environ["LATEST_FILE"])
+
+          if not sender:
+              raise SystemExit("GMAIL_SMTP_USER secret is empty")
+          if not password:
+              raise SystemExit("GMAIL_SMTP_APP_PASSWORD secret is empty")
+
+          body_bytes = latest_file.read_bytes()
+          validated = validate_payload_bytes(body_bytes)
+          body = body_bytes.decode("utf-8")
+          source_id = source_event_id(body_bytes, validated["generated_at"])
+
+          msg = EmailMessage()
+          msg["From"] = sender
+          msg["To"] = recipient
+          msg["Subject"] = os.environ["YORKIE_EVENT_TYPE"]
+          msg["X-Yorkie-Event"] = os.environ["YORKIE_EVENT_TYPE"]
+          msg["X-Yorkie-Schema-Version"] = os.environ["YORKIE_SCHEMA_VERSION"]
+          msg["X-Yorkie-Source-Path"] = os.environ["LATEST_FILE"]
+          msg["X-Yorkie-Generated-At"] = validated["generated_at"]
+          msg["X-Yorkie-Source-Event-ID"] = source_id
+          msg["X-Yorkie-Commit"] = os.environ["GITHUB_SHA_VALUE"]
+          msg.set_content(body, subtype="plain", charset="utf-8")
+
+          with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=30) as smtp:
+              smtp.login(sender, password)
+              smtp.send_message(msg)
+          PY
