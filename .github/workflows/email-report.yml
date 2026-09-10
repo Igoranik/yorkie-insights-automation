@@ -2,15 +2,9 @@ name: Yorkie Insights Email
 
 on:
   workflow_dispatch:
-  workflow_run:
-    workflows: ["Yorkie Instagram Insights"]
-    types: [completed]
 
 jobs:
   send:
-    if: >-
-      github.event_name == 'workflow_dispatch' ||
-      github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     permissions:
       contents: read

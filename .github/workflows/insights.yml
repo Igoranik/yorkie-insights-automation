@@ -13,6 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    outputs:
+      data_changed: ${{ steps.commit_data.outputs.data_changed }}
+      source_commit: ${{ steps.commit_data.outputs.source_commit }}
 
     steps:
       - uses: actions/checkout@v4
@@ -35,12 +38,29 @@ jobs:
         run: python -m unittest discover -s tests -v
 
       - name: Commit data
+        id: commit_data
+        shell: bash
         run: |
+          set -euo pipefail
+          echo "data_changed=false" >> "$GITHUB_OUTPUT"
+          echo "source_commit=" >> "$GITHUB_OUTPUT"
+
+          test -f docs/api/insights/latest.json
+          mkdir -p api/insights
+          cp docs/api/insights/latest.json api/insights/latest.json
+          cmp --silent docs/api/insights/latest.json api/insights/latest.json
+          python scripts/validate_payload.py api/insights/latest.json
+
           git config user.name "yorkie-insights-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/ docs/api/insights/latest.json
-          git diff --cached --quiet || git commit -m "Update Instagram Insights"
+          git add data/ docs/api/insights/latest.json api/insights/latest.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Update Instagram Insights"
           git push
+          echo "data_changed=true" >> "$GITHUB_OUTPUT"
+          echo "source_commit=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: Upload endpoint artifact
         uses: actions/upload-pages-artifact@v4
@@ -65,3 +85,14 @@ jobs:
       - name: Deploy read-only endpoint
         id: deployment
         uses: actions/deploy-pages@v4
+
+  email:
+    needs: collect
+    if: needs.collect.outputs.data_changed == 'true'
+    uses: ./.github/workflows/yorkie-insights-email.yml
+    with:
+      source_commit: ${{ needs.collect.outputs.source_commit }}
+    secrets:
+      GMAIL_SMTP_USER: ${{ secrets.GMAIL_SMTP_USER }}
+      GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+      INSIGHTS_EMAIL_TO: ${{ secrets.INSIGHTS_EMAIL_TO }}

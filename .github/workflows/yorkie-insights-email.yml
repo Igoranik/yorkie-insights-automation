@@ -1,9 +1,19 @@
 name: Yorkie Insights -> Gmail
 
 on:
-  push:
-    paths:
-      - 'api/insights/latest.json'
+  workflow_call:
+    inputs:
+      source_commit:
+        description: Commit containing the generated Insights payload
+        required: true
+        type: string
+    secrets:
+      GMAIL_SMTP_USER:
+        required: true
+      GMAIL_APP_PASSWORD:
+        required: true
+      INSIGHTS_EMAIL_TO:
+        required: true
 
 permissions:
   contents: read
@@ -25,6 +35,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.source_commit }}
 
       - name: Verify exact changed source
         shell: bash
@@ -42,9 +54,9 @@ jobs:
       - name: Send latest Yorkie Insights to Gmail
         env:
           GMAIL_SMTP_USER: ${{ secrets.GMAIL_SMTP_USER }}
-          GMAIL_SMTP_APP_PASSWORD: ${{ secrets.GMAIL_SMTP_APP_PASSWORD }}
-          YORKIE_INSIGHTS_RECIPIENT: ${{ secrets.YORKIE_INSIGHTS_RECIPIENT }}
-          GITHUB_SHA_VALUE: ${{ github.sha }}
+          GMAIL_SMTP_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          YORKIE_INSIGHTS_RECIPIENT: ${{ secrets.INSIGHTS_EMAIL_TO }}
+          SOURCE_COMMIT: ${{ inputs.source_commit }}
         shell: bash
         run: |
           set -euo pipefail
@@ -82,7 +94,7 @@ jobs:
           msg["X-Yorkie-Source-Path"] = os.environ["LATEST_FILE"]
           msg["X-Yorkie-Generated-At"] = validated["generated_at"]
           msg["X-Yorkie-Source-Event-ID"] = source_id
-          msg["X-Yorkie-Commit"] = os.environ["GITHUB_SHA_VALUE"]
+          msg["X-Yorkie-Commit"] = os.environ["SOURCE_COMMIT"]
           msg.set_content(body, subtype="plain", charset="utf-8")
 
           with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=30) as smtp:
