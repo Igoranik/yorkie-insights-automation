@@ -55,7 +55,7 @@ jobs:
         env:
           GMAIL_SMTP_USER: ${{ secrets.GMAIL_SMTP_USER }}
           GMAIL_SMTP_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-          YORKIE_INSIGHTS_RECIPIENT: ${{ secrets.INSIGHTS_EMAIL_TO }}
+          INSIGHTS_EMAIL_TO: ${{ secrets.INSIGHTS_EMAIL_TO }}
           SOURCE_COMMIT: ${{ inputs.source_commit }}
         shell: bash
         run: |
@@ -70,15 +70,26 @@ jobs:
           sys.path.insert(0, "scripts")
           from validate_payload import validate_payload_bytes, source_event_id
 
-          sender = os.environ["GMAIL_SMTP_USER"].strip()
-          password = os.environ["GMAIL_SMTP_APP_PASSWORD"].strip()
-          recipient = os.environ.get("YORKIE_INSIGHTS_RECIPIENT", "").strip() or sender
-          latest_file = Path(os.environ["LATEST_FILE"])
+          def normalized_required(name):
+              value = "".join(os.environ.get(name, "").split())
+              if not value:
+                  raise SystemExit(f"{name} is empty after whitespace normalization")
+              return value
 
-          if not sender:
-              raise SystemExit("GMAIL_SMTP_USER secret is empty")
-          if not password:
-              raise SystemExit("GMAIL_SMTP_APP_PASSWORD secret is empty")
+          def normalized_ascii_required(name):
+              value = normalized_required(name)
+              try:
+                  value.encode("ascii")
+              except UnicodeEncodeError:
+                  raise SystemExit(
+                      f"{name} contains unsupported non-ASCII characters"
+                  ) from None
+              return value
+
+          sender = normalized_ascii_required("GMAIL_SMTP_USER")
+          password = normalized_ascii_required("GMAIL_SMTP_APP_PASSWORD")
+          recipient = normalized_required("INSIGHTS_EMAIL_TO")
+          latest_file = Path(os.environ["LATEST_FILE"])
 
           body_bytes = latest_file.read_bytes()
           validated = validate_payload_bytes(body_bytes)
