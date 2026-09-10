@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "canonical_version": "v4.1",
+  "source": {
+    "exact_repo_path": "api/insights/latest.json",
+    "payload_schema": "YORKIE_INSIGHTS_PAYLOAD_COMPAT_V1",
+    "compatibility_note": "schema is enforced by validation; source JSON is not mutated because its generator was not available in provided files"
+  },
+  "trigger": {
+    "provider": "Gmail",
+    "event": "new_inbound_message",
+    "subject_exact": "YORKIE_INSIGHTS_UPDATE"
+  },
+  "pre_chat_gate": {
+    "must_run_before_chat_creation": true,
+    "provider_message_id": {
+      "use_for_transport_dedup": true,
+      "not_passed_into_new_chat": true
+    },
+    "source_event_id_algorithm": "sha256(event_type + NUL + exact_source_path + NUL + generated_at + NUL + raw_email_body)",
+    "persistent_dedup_required": true,
+    "reject_if_seen_provider_message_id_or_source_event_id": true,
+    "duplicate_action": "DO_NOT_CREATE_NEW_CHAT"
+  },
+  "new_chat": {
+    "input": "raw_email_body_only",
+    "chat_history": "FORBIDDEN",
+    "saved_memory": "FORBIDDEN"
+  }
+}

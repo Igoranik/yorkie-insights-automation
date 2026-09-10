@@ -1,0 +1,17 @@
+{
+  "project": "Yorkie Insights Automation",
+  "canonical_version": "v4.1",
+  "supersedes": "v4",
+  "source_path": "api/insights/latest.json",
+  "payload_contract": "YORKIE_INSIGHTS_PAYLOAD_COMPAT_V1",
+  "status": {
+    "hardening_local": "PASS",
+    "github_install": "NOT_PERFORMED",
+    "gmail_delivery": "NOT_TESTED",
+    "gmail_to_new_chat_bridge": "BLOCKED_EXTERNAL"
+  },
+  "unsupported": [
+    "Direct modification of latest.json generator: generator not present in provided files",
+    "Production E2E success before real GitHub/Gmail/new-chat event test"
+  ]
+}

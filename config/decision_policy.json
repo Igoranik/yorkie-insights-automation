@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "reason": "No confirmed source-backed numeric Winner/Loser thresholds are available in the provided project files.",
+  "default_decision": "HOLD",
+  "rules": []
+}

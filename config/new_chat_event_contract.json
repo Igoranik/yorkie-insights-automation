@@ -1,0 +1,27 @@
+{
+  "event_type": "YORKIE_INSIGHTS_UPDATE",
+  "trigger": {
+    "provider": "Gmail",
+    "condition": "new inbound message",
+    "subject_exact": "YORKIE_INSIGHTS_UPDATE"
+  },
+  "new_chat_contract": {
+    "use_message_body_only": true,
+    "use_chat_history": false,
+    "use_saved_memory": false,
+    "deduplicate_by_message_id": false,
+    "deduplicate_by": "sha256(raw_email_body)",
+    "deduplicate_before_new_chat": true,
+    "persistent_dedup_store_required": true
+  },
+  "processing": [
+    "verify_exact_subject",
+    "compute_event_id_from_raw_body",
+    "deduplicate_event_before_creating_second_processing_chat",
+    "parse_body_as_latest_json",
+    "normalize_without_inventing_missing_values",
+    "bind_reels_to_content_queue_by_exact_reel_id_or_permalink",
+    "hold_unmatched_items",
+    "apply_only_explicitly_enabled_source_backed_decision_policy"
+  ]
+}
