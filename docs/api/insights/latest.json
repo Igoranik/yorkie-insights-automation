@@ -1,7 +1,7 @@
 {
   "ok": true,
   "schema_version": 1,
-  "generated_at": "2026-09-11T00:18:27Z",
+  "generated_at": "2026-09-11T06:14:48Z",
   "reels_count": 12,
   "items": [
     {
@@ -11,15 +11,15 @@
       "timestamp": "2026-09-10T15:41:50+0000",
       "permalink": "https://www.instagram.com/reel/DdHLRYRqd7W/",
       "caption": "Наша манюня любит купаться? А ваш хвостик - тоже? Напиши нам в комментариях!\n\n#yorkshireterrier #yorkielife #yorkie #reels",
-      "reach": 13,
-      "views": 14,
+      "reach": 14,
+      "views": 15,
       "likes": 3,
       "comments": 1,
       "saved": 0,
       "shares": 0,
-      "ig_reels_avg_watch_time": 10503,
-      "ig_reels_video_view_total_time": 147046,
-      "reels_skip_rate": 61.5,
+      "ig_reels_avg_watch_time": 12265,
+      "ig_reels_video_view_total_time": 196255,
+      "reels_skip_rate": 64.3,
       "status": "INSUFFICIENT_DATA"
     },
     {
@@ -35,8 +35,8 @@
       "comments": 1,
       "saved": 0,
       "shares": 0,
-      "ig_reels_avg_watch_time": 23132,
-      "ig_reels_video_view_total_time": 416386,
+      "ig_reels_avg_watch_time": 22075,
+      "ig_reels_video_view_total_time": 419432,
       "reels_skip_rate": 41.7,
       "status": "INSUFFICIENT_DATA"
     },
@@ -53,8 +53,8 @@
       "comments": 0,
       "saved": 0,
       "shares": 0,
-      "ig_reels_avg_watch_time": 9886,
-      "ig_reels_video_view_total_time": 187834,
+      "ig_reels_avg_watch_time": 9906,
+      "ig_reels_video_view_total_time": 198120,
       "reels_skip_rate": 58.3,
       "status": "INSUFFICIENT_DATA"
     },
@@ -71,8 +71,8 @@
       "comments": 1,
       "saved": 0,
       "shares": 0,
-      "ig_reels_avg_watch_time": 14656,
-      "ig_reels_video_view_total_time": 234499,
+      "ig_reels_avg_watch_time": 14001,
+      "ig_reels_video_view_total_time": 238028,
       "reels_skip_rate": 40,
       "status": "INSUFFICIENT_DATA"
     },
@@ -89,8 +89,8 @@
       "comments": 0,
       "saved": 1,
       "shares": 0,
-      "ig_reels_avg_watch_time": 3744,
-      "ig_reels_video_view_total_time": 456843,
+      "ig_reels_avg_watch_time": 3740,
+      "ig_reels_video_view_total_time": 460111,
       "reels_skip_rate": 79.6,
       "status": "WATCH"
     },
@@ -107,8 +107,8 @@
       "comments": 0,
       "saved": 0,
       "shares": 0,
-      "ig_reels_avg_watch_time": 9620,
-      "ig_reels_video_view_total_time": 192415,
+      "ig_reels_avg_watch_time": 9290,
+      "ig_reels_video_view_total_time": 195096,
       "reels_skip_rate": 53.8,
       "status": "INSUFFICIENT_DATA"
     },
