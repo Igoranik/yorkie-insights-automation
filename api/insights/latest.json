@@ -1,7 +1,7 @@
 {
   "ok": true,
   "schema_version": 1,
-  "generated_at": "2026-09-11T06:14:48Z",
+  "generated_at": "2026-09-11T09:10:03Z",
   "reels_count": 12,
   "items": [
     {
@@ -11,15 +11,15 @@
       "timestamp": "2026-09-10T15:41:50+0000",
       "permalink": "https://www.instagram.com/reel/DdHLRYRqd7W/",
       "caption": "Наша манюня любит купаться? А ваш хвостик - тоже? Напиши нам в комментариях!\n\n#yorkshireterrier #yorkielife #yorkie #reels",
-      "reach": 14,
-      "views": 15,
+      "reach": 15,
+      "views": 17,
       "likes": 3,
       "comments": 1,
       "saved": 0,
       "shares": 0,
-      "ig_reels_avg_watch_time": 12265,
-      "ig_reels_video_view_total_time": 196255,
-      "reels_skip_rate": 64.3,
+      "ig_reels_avg_watch_time": 11602,
+      "ig_reels_video_view_total_time": 197240,
+      "reels_skip_rate": 68.8,
       "status": "INSUFFICIENT_DATA"
     },
     {
