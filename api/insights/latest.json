@@ -1,7 +1,7 @@
 {
   "ok": true,
   "schema_version": 1,
-  "generated_at": "2026-09-14T09:12:42Z",
+  "generated_at": "2026-09-14T12:08:45Z",
   "reels_count": 15,
   "items": [
     {
@@ -11,16 +11,16 @@
       "timestamp": "2026-09-13T11:01:06+0000",
       "permalink": "https://www.instagram.com/reel/DdOZ2lWKU0u/",
       "caption": "Команда для быстрого копирования промпта! \n\n#chatgpt #prompt #coding",
-      "reach": 25,
-      "views": 28,
+      "reach": 42,
+      "views": 45,
       "likes": 2,
       "comments": 1,
       "saved": 0,
       "shares": 0,
-      "ig_reels_avg_watch_time": 8407,
-      "ig_reels_video_view_total_time": 227007,
-      "reels_skip_rate": 44,
-      "status": "INSUFFICIENT_DATA"
+      "ig_reels_avg_watch_time": 5566,
+      "ig_reels_video_view_total_time": 244932,
+      "reels_skip_rate": 61.9,
+      "status": "WATCH"
     },
     {
       "id": "17919534147439545",
@@ -29,16 +29,16 @@
       "timestamp": "2026-09-12T09:19:31+0000",
       "permalink": "https://www.instagram.com/reel/DdLo-F7KZw9/",
       "caption": "Манюна заняла нагло  диван! 🤣\nВаш Йорк тоже так делает? 😍\n\n#yorkshireterrier #reels #yorkie #yorkielife",
-      "reach": 172,
-      "views": 194,
+      "reach": 173,
+      "views": 196,
       "likes": 8,
       "comments": 1,
       "saved": 1,
       "shares": 1,
-      "ig_reels_avg_watch_time": 7711,
-      "ig_reels_video_view_total_time": 1364920,
-      "reels_skip_rate": 34.9,
-      "status": "WINNER_CANDIDATE"
+      "ig_reels_avg_watch_time": 7652,
+      "ig_reels_video_view_total_time": 1369808,
+      "reels_skip_rate": 35.1,
+      "status": "WATCH"
     },
     {
       "id": "18109105436131854",
@@ -83,15 +83,15 @@
       "timestamp": "2026-09-09T09:33:11+0000",
       "permalink": "https://www.instagram.com/reel/DdD8WI0KQR2/",
       "caption": "Small dog. Big opponent. 🍉🐶 Who won?\n\n#yorkie #yorkshireterrier #yorkielife #funnydogs.",
-      "reach": 22,
-      "views": 44,
+      "reach": 23,
+      "views": 46,
       "likes": 5,
       "comments": 1,
       "saved": 0,
       "shares": 0,
-      "ig_reels_avg_watch_time": 16418,
-      "ig_reels_video_view_total_time": 492569,
-      "reels_skip_rate": 39.1,
+      "ig_reels_avg_watch_time": 15988,
+      "ig_reels_video_view_total_time": 495634,
+      "reels_skip_rate": 41.7,
       "status": "WATCH"
     },
     {
