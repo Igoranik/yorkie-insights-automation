@@ -1,7 +1,7 @@
 {
   "ok": true,
   "schema_version": 1,
-  "generated_at": "2026-09-15T09:12:50Z",
+  "generated_at": "2026-09-15T12:08:23Z",
   "reels_count": 15,
   "items": [
     {
@@ -17,8 +17,8 @@
       "comments": 1,
       "saved": 0,
       "shares": 0,
-      "ig_reels_avg_watch_time": 5566,
-      "ig_reels_video_view_total_time": 244932,
+      "ig_reels_avg_watch_time": 5944,
+      "ig_reels_video_view_total_time": 267502,
       "reels_skip_rate": 61.9,
       "status": "WATCH"
     },
@@ -29,16 +29,16 @@
       "timestamp": "2026-09-12T09:19:31+0000",
       "permalink": "https://www.instagram.com/reel/DdLo-F7KZw9/",
       "caption": "Манюна заняла нагло  диван! 🤣\nВаш Йорк тоже так делает? 😍\n\n#yorkshireterrier #reels #yorkie #yorkielife",
-      "reach": 174,
-      "views": 196,
+      "reach": 175,
+      "views": 197,
       "likes": 8,
       "comments": 1,
       "saved": 1,
       "shares": 1,
-      "ig_reels_avg_watch_time": 7652,
-      "ig_reels_video_view_total_time": 1369808,
-      "reels_skip_rate": 35.1,
-      "status": "WATCH"
+      "ig_reels_avg_watch_time": 7692,
+      "ig_reels_video_view_total_time": 1392422,
+      "reels_skip_rate": 34.9,
+      "status": "WINNER_CANDIDATE"
     },
     {
       "id": "18109105436131854",
@@ -47,16 +47,16 @@
       "timestamp": "2026-09-11T09:32:52+0000",
       "permalink": "https://www.instagram.com/reel/DdJF6F-qgEY/",
       "caption": "Наша прелесть на забеге 😍❤️ \nА ваш Йорк тоже так энергичен? \n#yorkshireterrier #yorkie #reels #yorkielife",
-      "reach": 22,
-      "views": 38,
-      "likes": 7,
+      "reach": 23,
+      "views": 40,
+      "likes": 8,
       "comments": 1,
       "saved": 0,
       "shares": 0,
-      "ig_reels_avg_watch_time": 11542,
-      "ig_reels_video_view_total_time": 334722,
-      "reels_skip_rate": 36,
-      "status": "WATCH"
+      "ig_reels_avg_watch_time": 11541,
+      "ig_reels_video_view_total_time": 346253,
+      "reels_skip_rate": 34.6,
+      "status": "WINNER_CANDIDATE"
     },
     {
       "id": "17925289395418817",
@@ -65,7 +65,7 @@
       "timestamp": "2026-09-10T15:41:50+0000",
       "permalink": "https://www.instagram.com/reel/DdHLRYRqd7W/",
       "caption": "Наша манюня любит купаться? А ваш хвостик - тоже? Напиши нам в комментариях!\n\n#yorkshireterrier #yorkielife #yorkie #reels",
-      "reach": 32,
+      "reach": 33,
       "views": 39,
       "likes": 7,
       "comments": 1,
