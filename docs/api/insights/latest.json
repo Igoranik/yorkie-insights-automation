@@ -1,7 +1,7 @@
 {
   "ok": true,
   "schema_version": 1,
-  "generated_at": "2026-09-17T09:12:10Z",
+  "generated_at": "2026-09-17T12:08:06Z",
   "reels_count": 16,
   "items": [
     {
@@ -11,15 +11,15 @@
       "timestamp": "2026-09-16T09:23:39+0000",
       "permalink": "https://www.instagram.com/reel/DdV9GCWqFxh/",
       "caption": "Сбор аналитики Instagram Reels больше не занимает время у меня.\n\n​Каждое утро тратите время на выгрузку охватов, просмотров и Skip Rate (пролистываемость мимо) вручную?\nМне это не понравилось!\nЯ сделал при помощи ИИ этот мой алгоритм, который проверяет почту, находит свежие данные и мгновенно формирует готовый отчет по всем метрикам.\nДанная информация предназначена для саморекламы и самопрезентации моих скромных возможностей. \n\nP. S: ​За пару дней научился!\nТы тоже так можешь! Я уверен на  91% :) \n\n#reels #coding #Insight #bot",
-      "reach": 113,
-      "views": 127,
+      "reach": 114,
+      "views": 128,
       "likes": 1,
       "comments": 1,
       "saved": 0,
       "shares": 0,
-      "ig_reels_avg_watch_time": 6084,
-      "ig_reels_video_view_total_time": 705806,
-      "reels_skip_rate": 59.8,
+      "ig_reels_avg_watch_time": 6040,
+      "ig_reels_video_view_total_time": 706719,
+      "reels_skip_rate": 60.2,
       "status": "WATCH"
     },
     {
