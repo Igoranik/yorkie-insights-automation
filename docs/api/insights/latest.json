@@ -1,7 +1,7 @@
 {
   "ok": true,
   "schema_version": 1,
-  "generated_at": "2026-09-18T09:11:18Z",
+  "generated_at": "2026-09-18T12:08:02Z",
   "reels_count": 17,
   "items": [
     {
@@ -11,15 +11,15 @@
       "timestamp": "2026-09-17T15:21:51+0000",
       "permalink": "https://www.instagram.com/reel/DdZK6bIKVa5/",
       "caption": "Наша Манюня играется с любимой игрушкой детства. Просто и увлекательно! А какая у вашего йорка игрушка детства? Расскажешь? \n\n#yorkshireterrier #yorkie #yorkielife #reels",
-      "reach": 2,
-      "views": 4,
+      "reach": 4,
+      "views": 6,
       "likes": 1,
       "comments": 1,
       "saved": 0,
       "shares": 0,
-      "ig_reels_avg_watch_time": 29046,
-      "ig_reels_video_view_total_time": 174278,
-      "reels_skip_rate": 100,
+      "ig_reels_avg_watch_time": 22293,
+      "ig_reels_video_view_total_time": 178350,
+      "reels_skip_rate": 75,
       "status": "INSUFFICIENT_DATA"
     },
     {
