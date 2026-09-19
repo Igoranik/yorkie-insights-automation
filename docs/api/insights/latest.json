@@ -1,7 +1,7 @@
 {
   "ok": true,
   "schema_version": 1,
-  "generated_at": "2026-09-19T06:13:56Z",
+  "generated_at": "2026-09-19T09:11:07Z",
   "reels_count": 17,
   "items": [
     {
@@ -66,15 +66,15 @@
       "permalink": "https://www.instagram.com/reel/DdLo-F7KZw9/",
       "caption": "Манюна заняла нагло  диван! 🤣\nВаш Йорк тоже так делает? 😍\n\n#yorkshireterrier #reels #yorkie #yorkielife",
       "reach": 178,
-      "views": 202,
+      "views": 203,
       "likes": 8,
       "comments": 1,
       "saved": 1,
       "shares": 1,
-      "ig_reels_avg_watch_time": 8100,
-      "ig_reels_video_view_total_time": 1490564,
-      "reels_skip_rate": 35,
-      "status": "WINNER_CANDIDATE"
+      "ig_reels_avg_watch_time": 8063,
+      "ig_reels_video_view_total_time": 1491761,
+      "reels_skip_rate": 35.4,
+      "status": "WATCH"
     },
     {
       "id": "18109105436131854",
