@@ -1,7 +1,7 @@
 {
   "ok": true,
   "schema_version": 1,
-  "generated_at": "2026-09-19T14:14:39Z",
+  "generated_at": "2026-09-20T06:16:01Z",
   "reels_count": 17,
   "items": [
     {
@@ -17,8 +17,8 @@
       "comments": 1,
       "saved": 0,
       "shares": 0,
-      "ig_reels_avg_watch_time": 15495,
-      "ig_reels_video_view_total_time": 216930,
+      "ig_reels_avg_watch_time": 16604,
+      "ig_reels_video_view_total_time": 249063,
       "reels_skip_rate": 77.8,
       "status": "INSUFFICIENT_DATA"
     },
@@ -83,16 +83,16 @@
       "timestamp": "2026-09-11T09:32:52+0000",
       "permalink": "https://www.instagram.com/reel/DdJF6F-qgEY/",
       "caption": "Наша прелесть на забеге 😍❤️ \nА ваш Йорк тоже так энергичен? \n#yorkshireterrier #yorkie #reels #yorkielife",
-      "reach": 25,
-      "views": 45,
+      "reach": 26,
+      "views": 46,
       "likes": 9,
       "comments": 1,
       "saved": 0,
       "shares": 0,
-      "ig_reels_avg_watch_time": 11323,
-      "ig_reels_video_view_total_time": 384986,
-      "reels_skip_rate": 34.5,
-      "status": "WINNER_CANDIDATE"
+      "ig_reels_avg_watch_time": 11053,
+      "ig_reels_video_view_total_time": 386888,
+      "reels_skip_rate": 36.7,
+      "status": "WATCH"
     },
     {
       "id": "17925289395418817",
