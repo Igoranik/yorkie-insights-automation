@@ -1,7 +1,7 @@
 {
   "ok": true,
   "schema_version": 1,
-  "generated_at": "2026-09-28T12:09:29Z",
+  "generated_at": "2026-09-28T14:16:53Z",
   "reels_count": 20,
   "items": [
     {
@@ -11,16 +11,16 @@
       "timestamp": "2026-09-28T11:16:45+0000",
       "permalink": "https://www.instagram.com/reel/Dd1DY3ROmhm/",
       "caption": "Манюня не в настроении с утра! А вы уважает ли личное пространство и желания своей собаки?\n\n#reels #yorkshireterrier #yorkie #yorkielife",
-      "reach": 45,
-      "views": 75,
+      "reach": 103,
+      "views": 122,
       "likes": 1,
-      "comments": 1,
+      "comments": 2,
       "saved": 0,
       "shares": 0,
-      "ig_reels_avg_watch_time": 5880,
-      "ig_reels_video_view_total_time": 264630,
-      "reels_skip_rate": 32.8,
-      "status": "WINNER_CANDIDATE"
+      "ig_reels_avg_watch_time": 6999,
+      "ig_reels_video_view_total_time": 748980,
+      "reels_skip_rate": 41.5,
+      "status": "WATCH"
     },
     {
       "id": "18354849451219238",
@@ -53,8 +53,8 @@
       "comments": 0,
       "saved": 0,
       "shares": 0,
-      "ig_reels_avg_watch_time": 7976,
-      "ig_reels_video_view_total_time": 1427865,
+      "ig_reels_avg_watch_time": 8157,
+      "ig_reels_video_view_total_time": 1468436,
       "reels_skip_rate": 28.4,
       "status": "WINNER_CANDIDATE"
     },
